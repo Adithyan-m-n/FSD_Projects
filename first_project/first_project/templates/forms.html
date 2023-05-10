@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Forms in Django</title>
+  </head>
+  <style>
+  input[type=submit] {
+      background-color: #04AA6D;
+      border: none;
+      color: white;
+      padding: 16px 32px;
+      text-decoration: none;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+  
+
+  </style>
+  <body>
+    <form action="/student/" method="post">           
+      {% csrf_token %}
+      <table>
+        <tr>
+          <td>{{ form.name.label }}</td>
+          <td>{{ form.name }}</td>
+        </tr>
+        <tr>
+          <td>{{ form.roll.label }}</td>
+          <td>{{ form.roll }} (form.roll.help_text)</td>
+        </tr>
+        <tr>
+          <td>{{ form.year.label }}</td>
+          <td>{{ form.year }}</td>
+        </tr>
+        <tr>
+          <td>{{ form.dob.label }}</td>
+          <td>{{ form.dob }}</td>
+        </tr>
+        <tr>
+          <td>{{ form.degree.label }}</td>
+          <td>{{ form.degree }}</td>
+        </tr>
+        <tr>
+          <td>{{ form.branch.label }}</td>
+          <td>{{ form.branch }}</td>
+        </tr>
+
+    </table>
+      <input type="submit" value="Submit">             
+    </form>
+  </body>
+</html>

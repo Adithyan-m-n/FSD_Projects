@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>First App</title>
+  </head>
+  <body>
+    <h1>This is index.html</h1>
+ 
+    <h2>{{ message }}</h2>
+    <h2>This page is visited {{ count }} times.</h2>
+    <p>Click <a href="/help/">here</a> for help.</p>
+    <p>Click <a href="/student/">here</a> for forms.</p>
+    <h3>Students</h3>
+    <table border="1">
+      {% for r in student_rows %}
+        <tr>
+          <td>{{ r.name }}</td>
+          <td>{{ r.roll_number }}</td>
+          <td>{{ r.year }}</td>
+          <td>{{ r.dob }}</td>
+          <td>{{ r.program }}</td>
+
+        </tr>
+      {% endfor %}
+    </table>
+    <h3>Programs offered</h3>
+    <table border="1">
+      {% for r in program_rows %}
+        <tr>
+          <td>{{ r.title }}</td>
+          <td>{{ r.branch }}</td>
+        </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
